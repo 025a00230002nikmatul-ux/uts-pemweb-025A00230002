@@ -26,7 +26,7 @@ declare(strict_types=1);
             <h2>Selamat Datang di Siomay Kuy</h2>
 
             <img
-                src="assets/siomay.jpg"
+                src="assets/siomaykuy.png"
                 alt="Hidangan siomay dengan saus kacang"
                 class="gambar-profil"
             >
