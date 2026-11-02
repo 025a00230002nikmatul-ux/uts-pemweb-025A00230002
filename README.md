@@ -6,61 +6,82 @@
 - **NIM:** 025A00230002
 - **Kelas:** A2-3A
 - **Mata Kuliah:** Pemrograman Web
+- **Program Studi:** Informatika
 
 ## 2. Deskripsi Proyek
 
-Siomay Kuy merupakan website sederhana untuk memperkenalkan usaha kuliner siomay. Website ini memiliki halaman profil dan halaman katalog yang menampilkan daftar menu, kategori, harga, serta stok.
+Siomay Kuy merupakan website sederhana untuk memperkenalkan usaha kuliner siomay. Website ini memiliki dua halaman utama, yaitu halaman profil usaha dan halaman katalog menu. Pengunjung dapat melihat informasi menu, kategori, harga, stok, serta status ketersediaan setiap menu.
 
-Website ini dibuat menggunakan PHP, HTML, dan CSS. Data menu disimpan dalam array PHP sehingga informasi dapat ditampilkan secara dinamis tanpa menggunakan database.
+Website ini dibuat menggunakan PHP, HTML, dan CSS. Data menu disimpan dalam array PHP sehingga dapat ditampilkan secara dinamis tanpa menggunakan database.
 
 ## 3. Teknologi yang Digunakan
 
-- HTML
-- CSS
-- PHP
-- Git dan GitHub
+Proyek ini menggunakan HTML5 untuk struktur halaman, CSS3 untuk mengatur tampilan, dan PHP untuk mengolah serta menampilkan data. Git dan GitHub digunakan untuk mengelola proyek, sedangkan Laragon digunakan untuk menjalankan website secara lokal.
 
 ## 4. Struktur File
 
-- `index.php` — Menampilkan halaman profil Siomay Kuy.
-- `katalog.php` — Menampilkan daftar menu dan ringkasan stok.
-- `data.php` — Menyimpan data menu dalam array PHP.
-- `functions.php` — Berisi fungsi-fungsi yang digunakan dalam website.
-- `style.css` — Mengatur tampilan website.
-- `assets/` — Menyimpan gambar website.
-- `screenshots/` — Menyimpan screenshot halaman website.
-- `.gitignore` — Mengatur file yang tidak perlu dilacak oleh Git.
+```text
+uts-pemweb-025A00230002/
+│
+├── index.php
+├── katalog.php
+├── data.php
+├── functions.php
+├── style.css
+├── README.md
+├── .gitignore
+│
+├── assets/
+│   ├── banner-katalog.png
+│   └── logosiomaykuy.png
+│
+└── screenshots/
+    ├── profil.png
+    └── katalog.png
+```
+
+Keterangan:
+- `index.php` — Halaman profil usaha.
+- `katalog.php` — Halaman daftar menu dan ringkasan stok.
+- `data.php` — Menyimpan delapan data menu dalam array PHP.
+- `functions.php` — Menyimpan fungsi pengolahan data.
+- `style.css` — Mengatur desain dan tampilan website.
+- `assets/` — Menyimpan gambar logo dan banner.
+- `screenshots/` — Menyimpan tangkapan layar website.
+- `.gitignore` — Mengatur file yang tidak perlu dilacak Git.
 
 ## 5. Fitur Website
 
-1. Menampilkan profil usaha Siomay Kuy.
-2. Menampilkan delapan jenis menu.
-3. Menampilkan kategori, harga, dan stok menu.
-4. Menampilkan status ketersediaan menu.
-5. Menampilkan ringkasan jumlah menu, total stok, nilai stok, dan harga tertinggi.
-6. Memiliki tampilan website yang diatur menggunakan CSS.
+Website Siomay Kuy memiliki fitur halaman profil usaha yang berisi deskripsi dan keunggulan, serta halaman katalog yang menampilkan delapan jenis menu beserta kategori, harga, dan stok. Website juga menampilkan status ketersediaan menu dan ringkasan berupa jumlah menu, total stok, nilai stok, serta harga tertinggi. Navigasi disediakan agar pengunjung dapat berpindah antara halaman profil dan katalog.
 
-## 6. Fungsi PHP yang Digunakan
+## 6. Penerapan PHP
 
-- `e()` — Mengamankan teks yang ditampilkan pada website.
-- `formatRupiah()` — Memformat angka menjadi mata uang rupiah.
-- `hitungTotalStok()` — Menghitung total stok menu.
-- `hitungNilaiStok()` — Menghitung nilai seluruh stok menu.
+Dalam proyek ini, terdapat beberapa fungsi buatan sendiri yang disimpan di `functions.php`, yaitu:
 
-## 7. Fungsi Bawaan PHP
+- `e()` untuk mengamankan teks sebelum ditampilkan ke HTML.
+- `formatRupiah()` untuk mengubah angka menjadi format mata uang rupiah.
+- `hitungTotalStok()` untuk menghitung seluruh stok menu.
+- `hitungNilaiStok()` untuk menghitung nilai seluruh stok menu.
 
-- `count()` — Menghitung jumlah data.
-- `array_filter()` — Menyaring data menu yang masih tersedia.
-- `array_column()` — Mengambil data harga dari array menu.
-- `max()` — Mencari harga tertinggi.
+Fungsi bawaan PHP yang digunakan adalah `count()` untuk menghitung jumlah data, `array_filter()` untuk menyaring menu yang tersedia, `array_column()` untuk mengambil data harga, dan `max()` untuk mencari harga tertinggi. Selain itu, `foreach` digunakan untuk menampilkan data menu, sedangkan `if` dan `else` digunakan untuk menentukan status ketersediaan menu.
 
-Selain itu, `foreach` digunakan untuk menampilkan data menu, sedangkan `if` dan `else` digunakan untuk menentukan status ketersediaan menu.
+## 7. Hasil Pengolahan Data
+
+Berdasarkan data yang dimasukkan, website menghasilkan ringkasan berikut:
+
+| Keterangan | Hasil |
+|---|---:|
+| Total jenis menu | 8 menu |
+| Menu tersedia | 8 menu |
+| Total seluruh stok | 90 item |
+| Total nilai stok | Rp252.000 |
+| Harga menu tertinggi | Rp15.000 |
 
 ## 8. Cara Menjalankan Website
 
 1. Buka aplikasi Laragon.
 2. Klik **Start All**.
-3. Pastikan folder proyek berada di dalam folder `www` Laragon.
+3. Letakkan folder proyek di dalam folder `www` Laragon.
 4. Buka browser.
 5. Masukkan alamat berikut:
 
@@ -70,19 +91,21 @@ Selain itu, `foreach` digunakan untuk menampilkan data menu, sedangkan `if` dan 
 
 ## 9. Screenshot Website
 
-Screenshot website disimpan dalam folder `screenshots/`.
+![Screenshot Halaman Profil](screenshots/profil.png)
 
-- `screenshots/profil.png` — Screenshot halaman profil.
-- `screenshots/katalog.png` — Screenshot halaman katalog menu.
+![Screenshot Halaman Katalog](screenshots/katalog.png)
 
 ## 10. Sumber dan Bantuan
 
-- Dokumentasi PHP: https://www.php.net/docs.php
-- Dokumentasi HTML: https://developer.mozilla.org/en-US/docs/Web/HTML
-- Dokumentasi CSS: https://developer.mozilla.org/en-US/docs/Web/CSS
+**Sumber referensi:**
+- PHP: https://www.php.net/docs.php
+- HTML: https://developer.mozilla.org/en-US/docs/Web/HTML
+- CSS: https://developer.mozilla.org/en-US/docs/Web/CSS
 
-**Bantuan AI:** ChatGPT digunakan sebagai alat bantu untuk memahami materi, menyusun kode, dan menyusun dokumentasi proyek. Kode dan hasil akhir diperiksa serta disesuaikan selama proses pengerjaan.
+**Penggunaan AI:**
+
+ChatGPT digunakan sebagai alat bantu untuk memahami materi, menyusun dan memeriksa kode, memperbaiki tampilan CSS, serta menyusun dokumentasi. Kode diperiksa kembali dengan menjalankan website melalui Laragon dan menguji hasil tampilannya.
 
 ---
 
-Proyek ini dibuat untuk memenuhi tugas Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web.
+Proyek ini dibuat untuk memenuhi tugas Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web, Program Studi Informatika, Tiga Serangkai University.
