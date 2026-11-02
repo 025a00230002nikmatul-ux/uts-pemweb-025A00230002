@@ -40,29 +40,40 @@ header p {
     font-size: 17px;
 }
 
+
 /* NAVIGASI */
+
 nav {
-    background: #8b4513;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
-    padding: 0 0 20px;
     flex-wrap: wrap;
+    background-color: #713719;
+    padding: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    background-color: transparent;
+    padding: 9px 18px;
     border-radius: 6px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-nav a:hover,
+/* Menu yang sedang aktif */
 nav a.active {
-    background-color: white;
-    color: #8b4513;
+    background-color: #f4bd65;
+    color: #49301f;
 }
+
+/* Efek ketika kursor diarahkan */
+nav a:hover {
+    background-color: #f4bd65;
+    color: #49301f;
+}
+
 
 /* =========================
    MAIN
