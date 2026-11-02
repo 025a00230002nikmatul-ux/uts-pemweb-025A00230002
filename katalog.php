@@ -46,12 +46,22 @@ $hargaTertinggi = max($daftarHarga);
 
     <main>
         <section class="katalog">
+
             <h2>Katalog Menu Siomay</h2>
             <p>Pilih menu favoritmu dari Siomay Kuy!</p>
+
+            <!-- Banner Foto Siomay -->
+            <div class="banner-katalog">
+                <img
+                    src="assets/banner-katalog.png"
+                    alt="Aneka hidangan siomay dengan saus kacang"
+                >
+            </div>
 
             <div class="daftar-menu">
                 <?php foreach ($daftarMenu as $menu): ?>
                     <article class="kartu-menu">
+
                         <h3><?= e($menu['nama']) ?></h3>
 
                         <p>
@@ -60,7 +70,7 @@ $hargaTertinggi = max($daftarHarga);
                         </p>
 
                         <p class="harga">
-                            <?= formatRupiah($menu['harga']) ?>
+                            <?= e(formatRupiah($menu['harga'])) ?>
                         </p>
 
                         <p>
@@ -77,6 +87,7 @@ $hargaTertinggi = max($daftarHarga);
                                 Stok Habis
                             </span>
                         <?php endif; ?>
+
                     </article>
                 <?php endforeach; ?>
             </div>
@@ -86,29 +97,30 @@ $hargaTertinggi = max($daftarHarga);
 
                 <p>
                     Total jenis menu:
-                    <strong><?= $totalMenu ?> menu</strong>
+                    <strong><?= e((string) $totalMenu) ?> menu</strong>
                 </p>
 
                 <p>
                     Menu tersedia:
-                    <strong><?= $jumlahTersedia ?> menu</strong>
+                    <strong><?= e((string) $jumlahTersedia) ?> menu</strong>
                 </p>
 
                 <p>
                     Total seluruh stok:
-                    <strong><?= $totalStok ?> item</strong>
+                    <strong><?= e((string) $totalStok) ?> item</strong>
                 </p>
 
                 <p>
                     Total nilai stok:
-                    <strong><?= formatRupiah($nilaiStok) ?></strong>
+                    <strong><?= e(formatRupiah($nilaiStok)) ?></strong>
                 </p>
 
                 <p>
-                     Harga menu tertinggi:
-                    <strong><?= formatRupiah($hargaTertinggi) ?></strong>
+                    Harga menu tertinggi:
+                    <strong><?= e(formatRupiah($hargaTertinggi)) ?></strong>
                 </p>
             </div>
+
         </section>
     </main>
 
