@@ -22,14 +22,11 @@ img {
     max-width: 100%;
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 header {
     background: linear-gradient(135deg, #8b4513, #c96b27);
     color: white;
-    padding: 25px 5%;
+    padding: 25px 5% 15px;
     text-align: center;
 }
 
@@ -39,31 +36,30 @@ header h1 {
 }
 
 header p {
-    margin: 0 0 15px;
+    margin: 0;
     font-size: 17px;
 }
 
-/* =========================
-   NAVIGASI
-========================= */
-
+/* NAVIGASI */
 nav {
+    background: #8b4513;
     display: flex;
     justify-content: center;
     gap: 10px;
+    padding: 0 0 20px;
     flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.18);
-    padding: 9px 18px;
+    padding: 10px 20px;
     border-radius: 6px;
     transition: 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     background-color: white;
     color: #8b4513;
 }
